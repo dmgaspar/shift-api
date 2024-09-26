@@ -1,0 +1,56 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8">
+  <diagram name="Page-1" id="4o19-rXjP2T5N_NXc4SS">
+    <mxGraphModel dx="1114" dy="1836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="iH49PK5iZ4_QZWs5Mf1X-58" value="operators" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="-770" width="230" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="iH49PK5iZ4_QZWs5Mf1X-59" value="&lt;div&gt;id SERIAL PRIMARY KEY,&lt;/div&gt;&lt;div&gt;name VARCHAR(255)&amp;nbsp;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="iH49PK5iZ4_QZWs5Mf1X-58">
+          <mxGeometry y="50" width="230" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="iH49PK5iZ4_QZWs5Mf1X-61" value="day_shifts" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="-520" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="iH49PK5iZ4_QZWs5Mf1X-62" value="id SERIAL PRIMARY KEY&lt;div&gt;day DATE&amp;nbsp;&lt;br&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="iH49PK5iZ4_QZWs5Mf1X-61">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="iH49PK5iZ4_QZWs5Mf1X-64" value="Shift" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="-400" width="170" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="iH49PK5iZ4_QZWs5Mf1X-65" value="id SERIAL PRIMARY KEY&lt;div&gt;&lt;div&gt;day_shift_id INT&amp;nbsp;&lt;/div&gt;&lt;div&gt;start_time TIME&amp;nbsp;&lt;/div&gt;&lt;div&gt;end_time TIME&amp;nbsp;&lt;/div&gt;&lt;div&gt;name VARCHAR(255)&amp;nbsp;&lt;/div&gt;&lt;div&gt;shift_number INT&amp;nbsp;&lt;/div&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="iH49PK5iZ4_QZWs5Mf1X-64">
+          <mxGeometry y="50" width="170" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="iH49PK5iZ4_QZWs5Mf1X-70" value="shift_operator" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="-740" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="iH49PK5iZ4_QZWs5Mf1X-71" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;id SERIAL PRIMARY KEY,&lt;/span&gt;&lt;br&gt;&lt;/div&gt;shift_id&amp;nbsp;&lt;div&gt;operator_id&lt;br&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="iH49PK5iZ4_QZWs5Mf1X-70">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="iH49PK5iZ4_QZWs5Mf1X-73" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;" edge="1" parent="1" source="iH49PK5iZ4_QZWs5Mf1X-62" target="iH49PK5iZ4_QZWs5Mf1X-64">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="270" y="-140" as="sourcePoint" />
+            <mxPoint x="330" y="-410" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="600" y="-410" />
+              <mxPoint x="330" y="-410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iH49PK5iZ4_QZWs5Mf1X-79" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmany;startArrow=ERmany;rounded=0;entryX=-0.037;entryY=0.214;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="iH49PK5iZ4_QZWs5Mf1X-65" target="iH49PK5iZ4_QZWs5Mf1X-71">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="560" y="-360" as="sourcePoint" />
+            <mxPoint x="660" y="-460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iH49PK5iZ4_QZWs5Mf1X-82" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmany;startArrow=ERmany;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="iH49PK5iZ4_QZWs5Mf1X-58" target="iH49PK5iZ4_QZWs5Mf1X-70">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="360" y="-630" as="sourcePoint" />
+            <mxPoint x="460" y="-730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
