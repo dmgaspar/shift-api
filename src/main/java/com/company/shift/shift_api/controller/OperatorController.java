@@ -41,21 +41,8 @@ public class OperatorController {
     @PostMapping
     public ResponseEntity<List<Operator>> createOperators(@RequestBody List<Operator> operators) {
         List<Operator> createdOperators =  operatorService.createOperators(operators);
-//        for (Operator operator : operators) {
-//            // Check if an operator with the same name already exists
-//            Optional<Operator> existingOperator = operatorService.findByName(operator);
-//
-//            if (existingOperator.isPresent()) {
-//                // Throw custom exception if the operator already exists
-//                throw new ResourceAlreadyExistException("Operator with name " + operator.getName() + " already exists.");
-//                //return new ResponseEntity<>(HttpStatus.CONFLICT);
-//            }
-//            else {
-//                createdOperators = operatorService.createOperators(operators);
-//            }
-//       }
-       return ResponseEntity.status(HttpStatus.CREATED).body(createdOperators);
 
+       return ResponseEntity.status(HttpStatus.CREATED).body(createdOperators);
     }
 
     @PutMapping("/{id}")

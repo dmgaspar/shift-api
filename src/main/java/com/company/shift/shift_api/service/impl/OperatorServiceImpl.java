@@ -41,7 +41,7 @@ public class OperatorServiceImpl implements OperatorService {
         return operatorRepository.findById(id).map(operator -> {
             operator.setOperator(newOperator);
             operatorRepository.save(operator);
-            return new Operator(operator.getName(), operator.getShifts());
+            return new Operator(operator.getId(), operator.getName(), operator.getShifts());
         });
     }
 
@@ -56,6 +56,10 @@ public class OperatorServiceImpl implements OperatorService {
             if (existingOperator.isPresent()) {
                 throw new ResourceAlreadyExistException("Operator with name " + operator.getName() + " already exists.");
             } else {
+                // Set shifts only if provided (could be empty)
+                if (operator.getShifts() != null && !operator.getShifts().isEmpty()) {
+                    // Todo: Check the existence of the shift
+                }
                 newOperators.add(operator);
             }
         }

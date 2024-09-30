@@ -19,7 +19,7 @@ public class Operator {
     @Column(name = "operator_name", nullable = false, unique = true)
     private String name;
 
-    @ManyToMany(mappedBy = "operators")
+    @ManyToMany(mappedBy = "operators", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Shift> shifts = new ArrayList<>();
 
     // Constructors for Spring and others

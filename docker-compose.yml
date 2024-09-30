@@ -12,8 +12,8 @@ services:
     ports:
       - 3333:5432
     networks:
-      - keycloak_network
+      - postgre_data_network
 
 networks:
-  keycloak_network:
+  postgre_data_network:
     driver: bridge
